@@ -1,0 +1,29 @@
+-- Create the database LoginPractice
+CREATE DATABASE LoginPractice;
+GO
+
+-- Use the LoginPractice database
+USE LoginPractice;
+GO
+
+-- Create the users_tables table
+CREATE TABLE users_tables (
+    UserID NVARCHAR(20) NOT NULL PRIMARY KEY,
+    UserPass NVARCHAR(16) NOT NULL,
+    UserName NVARCHAR(50) NOT NULL,
+    UserRole NVARCHAR(20) NOT NULL
+);
+GO
+
+-- Insert data into the users_tables table
+INSERT INTO users_tables (UserID, UserPass, UserName, UserRole)
+VALUES
+('admin1', 'admin1Pass', 'admin1Name', 'Admin'),
+('admin2', 'admin2Pass', 'admin2Name', 'Admin'),
+('librarian1', 'librarian1Pass', 'librarianName', 'Librarian'),
+('student1', 'student1Pass', 'student1Name', 'Student');
+GO
+
+-- Verify the inserted data (optional)
+SELECT * FROM users_tables;
+GO
